@@ -9,13 +9,19 @@
         "url": "https://www.alura.com.br/cursos-online-front-end"
       }
     }
-   ],
+  ],
   "videos": [
     {
       "id": 1,
       "categoriaId": 1,
       "titulo": "SEO com React",
       "url": "https://www.youtube.com/watch?v=c8mVlakBESE"
+    },
+    {
+      "titulo": "Maria Luiza - Malu - Cantando Para Seus Avós!",
+      "url": "https://www.youtube.com/watch?v=YhN0UTDeKB4",
+      "categoriaId": 1,
+      "id": 2
     }
   ]
 }
