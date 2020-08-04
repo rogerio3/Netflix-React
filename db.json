@@ -8,6 +8,18 @@
         "text": "Formação de Front End na Alura",
         "url": "https://www.alura.com.br/cursos-online-front-end"
       }
+    },
+    {
+      "titulo": "Maluzinha",
+      "descricao": "Filha linda do meu coração",
+      "cor": "#ff00ff",
+      "id": 2
+    },
+    {
+      "titulo": "Codedrops",
+      "descricao": "Dicas de programação diversas",
+      "cor": "#00ff00",
+      "id": 3
     }
   ],
   "videos": [
@@ -22,6 +34,30 @@
       "url": "https://www.youtube.com/watch?v=YhN0UTDeKB4",
       "categoriaId": 1,
       "id": 2
+    },
+    {
+      "titulo": "Maria Luiza - Malu - Cantando Para Seus Avós!",
+      "url": "https://www.youtube.com/watch?v=YhN0UTDeKB4",
+      "categoriaId": 2,
+      "id": 3
+    },
+    {
+      "titulo": "Maria Luiza - Malu - Cantando Para Seus Avós!",
+      "url": "https://www.youtube.com/watch?v=YhN0UTDeKB4",
+      "categoriaId": 2,
+      "id": 4
+    },
+    {
+      "titulo": "Samba de Maria Luiza || Tom Jobim",
+      "url": "https://www.youtube.com/watch?v=tulWE4mL5hc",
+      "categoriaId": 2,
+      "id": 5
+    },
+    {
+      "titulo": "Consumindo API no Front e no Back-end | CodeDrops #45",
+      "url": "https://www.youtube.com/watch?v=vYlz3SmNXQQ&t=95s",
+      "categoriaId": 3,
+      "id": 6
     }
   ]
 }

@@ -35,8 +35,9 @@ function CadastroVideo() {
         event.preventDefault();
         // eslint-disable-next-line max-len
         const categoriaEscolhida = categorias.find((categoria) => categoria.titulo === values.categoria);
-        console.log('categoriaEscolhida:', categoriaEscolhida);
+        // console.log('categoriaEscolhida:', categoriaEscolhida);
         if (categoriaEscolhida === undefined) {
+          // eslint-disable-next-line no-alert
           alert('Categoria não localizada. Selecione uma categoria da lista ou Cadastre uma nova');
           // history.push('/cadastro/categoria');
         } else {
@@ -46,7 +47,7 @@ function CadastroVideo() {
             categoriaId: categoriaEscolhida.id,
           })
             .then((response) => {
-              if (response.status === 200) {
+              if (response.ok) {
                 setMessage('Cadastro efetuado com sucesso!');
                 history.push('/');
               }

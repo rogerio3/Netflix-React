@@ -4,10 +4,11 @@ import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
 import useForm from '../../../hooks/useForm';
+import categoriasRepository from '../../../repositories/categorias';
 
-function CadastroCategoria(Cadnome) {
+function CadastroCategoria() {
   const valoresIniciais = {
-    nome: '' || 'Cadnome',
+    nome: '',
     descricao: '',
     cor: '',
   };
@@ -28,13 +29,12 @@ function CadastroCategoria(Cadnome) {
           ...resposta,
         ]);
       });
-  }, []);
+  }, [categorias]);
 
   return (
     <PageDefault>
       <h1>
         Cadastro de Categoria:
-        {values.nome}
       </h1>
 
       <form onSubmit={function handleSubmit(e) {
@@ -43,7 +43,11 @@ function CadastroCategoria(Cadnome) {
           ...categorias,
           values,
         ]);
-
+        categoriasRepository.createCategories({
+          titulo: values.nome,
+          descricao: values.descricao,
+          cor: values.cor,
+        });
         clearForm();
       }}
       >
@@ -51,7 +55,7 @@ function CadastroCategoria(Cadnome) {
         <FormField
           label="Categoria"
           name="nome"
-          value={values.nome || Cadnome}
+          value={values.nome}
           onChange={handleChange}
         />
 
@@ -75,13 +79,18 @@ function CadastroCategoria(Cadnome) {
           Cadastrar
         </Button>
       </form>
+      <Button>
+        <Link to="/">
+          Ir para home
+        </Link>
+      </Button>
 
       {categorias.length === 0 && (
         <div>
           Loading...
         </div>
       )}
-
+      <h3>Categorias cadastradas:</h3>
       <ul>
         {categorias.map((categoria) => (
           <li key={`${categoria.titulo}`}>
@@ -89,10 +98,6 @@ function CadastroCategoria(Cadnome) {
           </li>
         ))}
       </ul>
-
-      <Link to="/">
-        Ir para home
-      </Link>
     </PageDefault>
   );
 }
